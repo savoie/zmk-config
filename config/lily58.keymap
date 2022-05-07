@@ -108,7 +108,16 @@
         compatible = "zmk,conditional-layers";
         mac_lower_override {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <4>;
         };
     };
+
+	macros {
+		ZMK_MACRO(to_win,
+			bindings = <&bt BT_SEL 0 &to 0>;
+		),
+		ZMK_MACRO(to_mac,
+			bindings = <&bt BT_SEL 1 &to 1>;
+		)
+	};
 };
